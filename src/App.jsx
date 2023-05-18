@@ -1,9 +1,9 @@
-
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+
 
 function App() {
 
