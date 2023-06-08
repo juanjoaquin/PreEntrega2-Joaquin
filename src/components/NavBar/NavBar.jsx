@@ -1,30 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
 import CartWidget from "../CartWidget/CartWidget";
 
-
-const NavBar = ({BackColor, ColorText}) => {
+const NavBar = () => {
     return(
-        <div className="navApp">
-            <nav style={{backgroundColor: BackColor}}>
-                <ul style={{display: "flex",
-            justifyContent:"space-around",
-            alignItems:"center",
-            listStyle:"none",
-            fontSize:"21px",
-            fontWeight: "500",
-            margin:"0px",
-            padding: "0px",
-            height: "56px"
-            }}>
-                    <li><a href="" style={{textDecoration:"none", padding: "5px", color: ColorText}}>Inicio</a></li>
-                    <li><a href=""style={{textDecoration:"none", padding: "5px", color: ColorText}}>Motos</a></li>
-                    <li><a href=""style={{textDecoration:"none", padding: "5px", color: ColorText}}>Contáctanos</a></li>
-                    <li><a href=""style={{textDecoration:"none", padding: "5px", color: ColorText,}}>Marcas</a></li>
-                    <CartWidget  />
-                    
+        <div>
+            <nav className="navApp">
+                <ul>
+                    <Link to="/" >
+                <img className="logoNav" src={logo} alt="logo"/> 
+                    </Link>
+                    <li><Link to="/catalogo">Catalogue</Link></li>
+                    <li><Link to="/catalogo/men's clothing">Men's clothing</Link></li>
+                    <li><Link to="/catalogo/jewelery">Jewelery</Link></li>
+                    <li><Link to="/catalogo/electronics">Electronics</Link></li>
+                    <li><CartWidget /></li>
                 </ul>
                 
             </nav>
+            
         </div>
     );
 };
